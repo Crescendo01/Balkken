@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1pcpu1pgyter"]
+
+[ext_resource type="PackedScene" uid="uid://dijixwtywj0jn" path="res://killer_bean.tscn" id="1_ftka1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3a5gf"]
+size = Vector3(10, 1, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o4yms"]
+size = Vector3(10.736, 0.199707, 17.1822)
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.994554, -0.0772501, 0.536096)
+
+[node name="KillerBean" parent="." instance=ExtResource("1_ftka1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0131784, 2.03487, 0.0322962)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0696496, -0.728236, 1.99561)
+mesh = SubResource("BoxMesh_3a5gf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.153626, -0.400146, -5.02261)
+shape = SubResource("BoxShape3D_o4yms")
