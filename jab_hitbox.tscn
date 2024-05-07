@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh4rg7jtbpim5"]
+
+[ext_resource type="Script" path="res://JabHitbox.gd" id="1_dv1rs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a0ko6"]
+size = Vector3(0.182373, 0.152835, 0.143631)
+
+[node name="JabHitbox" type="Area3D"]
+monitorable = false
+script = ExtResource("1_dv1rs")
+
+[node name="Jab_Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.446757, 0.299727, 0.165432)
+shape = SubResource("BoxShape3D_a0ko6")
